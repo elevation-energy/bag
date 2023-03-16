@@ -130,7 +130,7 @@ class Bag implements \ArrayAccess, \JsonSerializable
     /**
      * {@inheritDoc}
      */
-    public function offsetExists($offset): bool
+    public function offsetExists($offset)
     {
         return isset($this->attributes[$offset]);
     }
@@ -138,7 +138,7 @@ class Bag implements \ArrayAccess, \JsonSerializable
     /**
      * {@inheritDoc}
      */
-    public function offsetGet($offset): mixed
+    public function offsetGet($offset)
     {
         return $this->get($offset);
     }
@@ -146,7 +146,7 @@ class Bag implements \ArrayAccess, \JsonSerializable
     /**
      * {@inheritDoc}
      */
-    public function offsetSet($offset, $value): void
+    public function offsetSet($offset, $value)
     {
         $this->set($offset, $value);
     }
@@ -154,7 +154,7 @@ class Bag implements \ArrayAccess, \JsonSerializable
     /**
      * {@inheritDoc}
      */
-    public function offsetUnset($offset): void
+    public function offsetUnset($offset)
     {
         $this->remove($offset);
     }
@@ -162,7 +162,7 @@ class Bag implements \ArrayAccess, \JsonSerializable
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize(): mixed
+    public function jsonSerialize()
     {
         return $this->attributes;
     }

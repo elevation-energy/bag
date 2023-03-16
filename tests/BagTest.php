@@ -2,9 +2,7 @@
 
 namespace Adam\Bag;
 
-use PHPUnit\Framework\TestCase;
-
-class BagTest extends TestCase
+class BagTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetWithSimpleValues()
     {
